@@ -5,7 +5,7 @@ import moment from 'moment'
 import utilStyles from '../../styles/utils.module.scss'
 import axios from 'axios';
 
-export default function Post({ postData, text }) {
+export default function Post({ postData }) {
     return <Layout>
         <Head>
             <title>{postData.title}</title>
@@ -16,7 +16,6 @@ export default function Post({ postData, text }) {
                 {moment(postData.date, 'YYYY-MM-DD').locale('vi').format('ll')}
             </div>
             <div className='mark-down' dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-            {text}
         </article>
     </Layout>
 }
@@ -31,14 +30,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
     const postData = await getPostData(params.id)
-    const getData = await axios({
-        url: 'http://localhost:3000/api/hello',
-        method: 'GET'
-    })
-
-    if (getData) {
-        console.log(getData.data)
-    }
     return {
         props: {
             postData,
