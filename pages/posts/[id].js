@@ -3,7 +3,6 @@ import { getAllPostIds, getPostData } from '../../lib/posts';
 import Head from 'next/head';
 import moment from 'moment'
 import utilStyles from '../../styles/utils.module.scss'
-import axios from 'axios';
 
 export default function Post({ postData }) {
     return <Layout>
@@ -33,7 +32,6 @@ export async function getStaticProps({ params }) {
     return {
         props: {
             postData,
-            text: getData.data.text || 'mia'
         }
     }
 
