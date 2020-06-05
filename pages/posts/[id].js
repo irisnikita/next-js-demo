@@ -10,7 +10,6 @@ export default function Post({ postData }) {
             <title>{postData.title}</title>
         </Head>
         <article>
-            <div>no thing</div>
             <h1 className={utilStyles.headingXl}>{postData.title}</h1>
             <div className={utilStyles.lightText}>
                 {moment(postData.date, 'YYYY-MM-DD').locale('vi').format('ll')}

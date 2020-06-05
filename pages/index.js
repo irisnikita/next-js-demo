@@ -22,9 +22,6 @@ export default function Home({ allPostsData }) {
 			<Head>
 				<title>{siteTitle}</title>
 			</Head>
-			<Alert type='success'>
-				Don't do that
-      </Alert>
 			<section className={utilStyles.headingMd}>
 				<p>I'm Vi, i'm eleven year old. Now my job is developer, i have 2 year experences</p>
 				<p>
