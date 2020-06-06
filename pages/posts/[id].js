@@ -18,6 +18,7 @@ export default function Post({ postData }) {
         <Head>
             <title>{postData.title}</title>
             <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/highlight.min.js"></script>
+            <script charSet="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/languages/go.min.js"></script>
         </Head>
         <article>
             <h1 className={utilStyles.headingXl}>{postData.title}</h1>
