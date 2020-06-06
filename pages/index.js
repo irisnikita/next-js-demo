@@ -1,10 +1,8 @@
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head'
 import Link from 'next/link'
 import Layout, { siteTitle } from '../components/Layout'
 import utilStyles from '../styles/utils.module.scss'
-
-import Alert from '../components/Alert/Alert';
-
 import { getSortedPostsData } from '../lib/posts';
 
 export async function getStaticProps() {
@@ -45,11 +43,6 @@ export default function Home({ allPostsData }) {
 					))}
 				</ul>
 			</section>
-			<Link href='/posts/first-post'>
-				<a>
-					My firs post
-        </a>
-			</Link>
 		</Layout>
 	)
 }

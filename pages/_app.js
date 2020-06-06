@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import hljs from "highlight.js";
 import '../styles/styles.scss';
 import 'highlight.js/styles/tomorrow.css';
+import 'react-quill/dist/quill.snow.css';
 
 export default function App({ Component, pageProps }) {
     useEffect(() => {
